@@ -23,7 +23,7 @@ function HomePage() {
             }}>
         <Menu/>
         <Header />
-        <Timeline playlist={config.playlist} />
+        <Timeline playlists={config.playlists} />
       </div>
     </>
   );
@@ -67,14 +67,14 @@ function Header() {
 
 function Timeline(propriedades) {
   //console.log("dentro do componete", propriedades.playlist);
-  const playlistNames = Object.keys(propriedades.playlist);
+  const playlistNames = Object.keys(propriedades.playlists);
   // Statement
   // Retorno por expressão
   // vai ser map o tempo todo
   return (
     <StyledTimeline>
       {playlistNames.map((playlistName) => {
-        const videos = propriedades.playlist[playlistName];
+        const videos = propriedades.playlists[playlistName];
         console.log(playlistName);
         console.log(videos);
         return (
