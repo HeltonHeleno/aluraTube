@@ -2,9 +2,8 @@ import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
-import {Timeline} from "../src/components/Timeline";
 import { StyledTimeline } from "../src/components/Timeline";
-//import { StyledTimeline } from "../src/components/TimeLine";
+
 
 function HomePage() {
   const estilosDaHomePage = {
@@ -26,7 +25,9 @@ function HomePage() {
       >
         <Menu />
         <Header />
-        <Timeline playlists={config.playlists}>Conteúdo</Timeline>
+        <Timeline playlists={config.playlists}>
+          Conteúdo
+        </Timeline>
       </div>
     </>
   );
