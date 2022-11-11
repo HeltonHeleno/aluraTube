@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
-//import { StyledTimeline } from "../src/components/TimeLine"; 
+//import { StyledTimeline } from "../src/components/TimeLine";
 
 function HomePage() {
-  const estilosDaHomePage = { 
-    //backgroundColor: "red" 
+  const estilosDaHomePage = {
+    //backgroundColor: "red"
   };
 
   //console.log(config.playlist);
@@ -15,15 +15,17 @@ function HomePage() {
   return (
     <>
       <CSSReset />
-      <div style={{
-                display: "flex",
-                flexDirection: "column",
-                flex: 1,
-                // backgroundColor: "red",
-            }}>
-        <Menu/>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+          // backgroundColor: "red",
+        }}
+      >
+        <Menu />
         <Header />
-        <Timeline playlists={config.playlists} />
+        <Timeline playlists={config.playlists}>Conteúdo</Timeline>
       </div>
     </>
   );
@@ -62,7 +64,7 @@ function Header() {
         </div>
       </section>
     </StyledHeader>
-  )
+  );
 }
 
 function Timeline(propriedades) {
@@ -87,12 +89,12 @@ function Timeline(propriedades) {
                     <img src={video.thumb} />
                     <span>{video.title}</span>
                   </a>
-                )
+                );
               })}
             </div>
           </section>
-        )
-      })}   
+        );
+      })}
     </StyledTimeline>
-  )
+  );
 }
