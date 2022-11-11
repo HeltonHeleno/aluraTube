@@ -15,10 +15,15 @@ function HomePage() {
   return (
     <>
       <CSSReset />
-      <div style={estilosDaHomePage}>
+      <div style={{
+                display: "flex",
+                flexDirection: "column",
+                flex: 1,
+                // backgroundColor: "red",
+            }}>
         <Menu/>
         <Header />
-        <TimeLine playlist={config.playlist} />
+        <Timeline playlist={config.playlist} />
       </div>
     </>
   );
@@ -57,10 +62,10 @@ function Header() {
         </div>
       </section>
     </StyledHeader>
-  );
+  )
 }
 
-function TimeLine(propriedades) {
+function Timeline(propriedades) {
   //console.log("dentro do componete", propriedades.playlist);
   const playlistNames = Object.keys(propriedades.playlist);
   // Statement
@@ -82,12 +87,12 @@ function TimeLine(propriedades) {
                     <img src={video.thumb} />
                     <span>{video.title}</span>
                   </a>
-                );
+                )
               })}
             </div>
           </section>
-        );
+        )
       })}   
     </StyledTimeline>
-  );
+  )
 }
