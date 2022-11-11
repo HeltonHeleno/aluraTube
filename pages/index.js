@@ -2,7 +2,7 @@ import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
-import { StyledTimeline } from "../src/components/Timeline";
+import { StyledTimeline } from "../src/components/Timeline"; 
 
 function HomePage() {
   const estilosDaHomePage = { 
@@ -28,7 +28,6 @@ export default HomePage;
 //function Menu() {
 //  return <div>Menu</div>;
 //}
-
 const StyledHeader = styled.div`
   img {
     width: 80px;
